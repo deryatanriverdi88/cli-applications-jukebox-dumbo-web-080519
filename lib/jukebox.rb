@@ -52,8 +52,7 @@ def run(songs)
    while !methods.include?(input)
     puts "Please enter a command:"
     input = gets.strip
-  end
-
+    
    case input
   when "help"
     help
