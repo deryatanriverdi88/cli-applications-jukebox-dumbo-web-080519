@@ -27,15 +27,17 @@ end
 
 def play(songs)
   puts "Please enter a song name or number:"
-  p input = 9
+  p input = 2
   songs.each_with_index do |song, index|
-    if input == index + 1
-      puts "Playing the #{song}"
-      break
-    else
-      puts "Invalid input, please try again."
-    end
-  end
+    if input >= 1 && input <= 9
+      if input == index + 1
+       return "Playing the #{song}"
+       break
+      else
+        puts "Invalid input, please try again."
+     end
+   end
+ end
 end
 
 
