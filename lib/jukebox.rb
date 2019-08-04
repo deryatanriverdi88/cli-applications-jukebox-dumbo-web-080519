@@ -39,7 +39,9 @@ def play(songs)
   end
 end
 
-
+def exit 
+  puts "Goodbye"
+end
 
 
 
