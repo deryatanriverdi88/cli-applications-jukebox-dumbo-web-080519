@@ -27,7 +27,7 @@ end
 
 def play(songs)
   puts "Please enter a song name or number:"
-  input = gets.chomp.to_i
+  input = 2
   songs.each_with_index do |song, index|
     if input.to_i >= 1 && input.to_i <= 9
       input = input.to_i
