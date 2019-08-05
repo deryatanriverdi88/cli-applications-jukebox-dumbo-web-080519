@@ -43,24 +43,26 @@ def exit_jukebox
   puts "Goodbye"
 end
 
-def run(songs)
-  methods = ["help", "list", "play", "exit"]
-  help
-  puts "Please enter a command:"
-  input = gets.strip
+ def run
+   methods = ["help", "list", "play", "exit"]
+   help
+   puts "Please enter a command:"
+   input = gets.strip
 
-   while !methods.include?(input)
-    puts "Please enter a command:"
-    input = gets.strip
-    
-   case input
-  when "help"
-    help
-  when "play"
-    play(songs)
-  when "list"
-    list(songs)
-  when "exit"
-    exit_jukebox
-    exit
-  end
+    while !methods.include?(input)
+     puts "invalid command, please enter a valid command:"
+     input = gets.strip
+   end
+
+    case input
+   when "help"
+     help
+   when "play"
+     play(songs)
+   when "list"
+     list(songs)
+   when "exit"
+     exit_jukebox
+     exit
+   end
+ endd
