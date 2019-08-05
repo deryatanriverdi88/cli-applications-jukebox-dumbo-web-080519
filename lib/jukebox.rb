@@ -43,26 +43,25 @@ def exit_jukebox
   puts "Goodbye"
 end
 
- def run
-   methods = ["help", "list", "play", "exit"]
+
+ def run(my_songs)
+   #this method is the same as in jukebox.rb	  #this method is the same as in jukebox.rb
    help
-   puts "Please enter a command:"
-   input = gets.strip
-
-    while !methods.include?(input)
-     puts "invalid command, please enter a valid command:"
-     input = gets.strip
-   end
-
-    case input
-   when "help"
-     help
-   when "play"
-     play(songs)
-   when "list"
-     list(songs)
-   when "exit"
-     exit_jukebox
-     exit
+   input = ""
+   while input != "exit"
+     puts "Please enter a command:"
+     input = gets.chomp.to_s.downcase
+     case input
+     when "play"
+       play(my_songs)
+     when "list"
+       list(my_songs)
+     when "help"
+       help
+     when "exit"
+       exit_jukebox
+     else
+       puts "Invalid input, please try again"
+     end
    end
  end
